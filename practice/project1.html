@@ -3,12 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="project1.css" />
+    <script>
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropbtn")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+    </script>
     <title>Project 1</title>
   </head>
 
   <body>
-    <header>
+    <header class="navbar">
       <h1>Project 1</h1>
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Projects</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="project1.html">Project 1</a>
+          <a href="project2..html">Project 2</a>
+          <a href="#">TBA</a>
+        </div>
+      </div>
 
       <nav>
         <a href="project1.html">Project 1</a>
