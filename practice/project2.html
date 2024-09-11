@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="practice_css/css_reset.css" />
+    <link rel="stylesheet" href="practice_css/base.css" />
+    <link rel="stylesheet" href="practice_css/layout.css" />
+    <link rel="stylesheet" href="practice_css/component.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="module" src="practice_js/project2script.js" defer></script>
+
+    <title>Project 2</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Project 2</h1>
+      <a href="../index.html">Mainpage</a>
+      <a href="index.html">Project Homepage</a>
+
+      <nav class="navbar">
+        <a href="project1.html" class="mx-1">Project 1</a>
+        <a href="project2.html" class="mx-1">Project 2</a>
+      </nav>
+    </header>
+
+    <main class="page-container">
+      <h2>Projects:</h2>
+
+      <div>
+        Votes:
+        <span id="voteValue">0</span>
+        <button id="voteBtn" class="btn btn-primary">UpVote</button>
+      </div>
+
+      <p>Some Introduction text</p>
+
+      <div class="card">
+        <div class="card-content">
+          <!-- <img src="" alt="Card image" class="card-image"> -->
+
+          <h2 class="card-title">Give me some feedback!</h2>
+
+          <p class="card-text">
+            I'd really like to hear your feedback on this work.
+          </p>
+
+          <form action="" id="feedbackForm">
+            <div class="form-group">
+              <label for="firstName">First Name:</label>
+              <input type="text" id="firstName" name="firstName" required />
+            </div>
+
+            <div class="form-group">
+              <label for="comment">Your Comment:</label>
+              <textarea type="comment" id="comment" rows="4" required>
+              </textarea>
+            </div>
+          </form>
+
+          <button class="btn btn-action my-1 float-right">Submit</button>
+        </div>
+      </div>
+
+      <div class="weather-widget">
+        <h4>Current Weather</h4>
+        <p>Sunny, <span id="current_temperature">25</span>°C</p>
+      </div>
+    </main>
+
+    <footer>
+      <p>2024 Aditya Bayuprasetyo. All rights reserved</p>
+    </footer>
+  </body>
+</html>
