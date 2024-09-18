@@ -1,0 +1,22 @@
+#flexnavbar {
+    display: flex; /*Turn this element into a flex container */
+    flex-flow: row wrap; /*Content flows left to right and wrap if needed */
+    justify-content: space-around; /*Extra space is added around each element*/
+}
+
+/* Select all the <a> elements inside my #flexnavbar container */
+#flexnavbar > a {
+    flex:1; /* Each element tries to take up an equal amount of space */
+}
+
+/* Define a breakpoint for all devices larger than 600px wide */
+@media screen and (min-width: 600px){
+    #flexnavbar {
+        justify-content: flex-end; /* Justify all items to the end */
+    }
+    
+    #flexnavbar > a {
+        flex: none; /* Elements will not shrink or grow */
+        padding: 3px 10px 3px 10px; /* add some padding to space things out */
+    }
+}
