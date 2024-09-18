@@ -19,4 +19,37 @@
         flex: none; /* Elements will not shrink or grow */
         padding: 3px 10px 3px 10px; /* add some padding to space things out */
     }
+
+    #gridcontainer {
+        display: grid; /* Turn this element into a grid container */
+        height: 100vh; /* Make the grid container take up 100% of the window height */
+    
+        /* define the grid structure, and content of cells */
+        grid-template-areas:
+        "header header ."
+        "nav nav nav"
+        "main main main"
+        "foot foot foot" ;
+    
+        grid-template-columns: 1fr 1fr 1fr; /* Set the columns width  */
+        grid-template-rows: auto 1fr auto auto; /* Set the row height  */
+    }
 }
+
+
+
+header{
+    grid-area: header; /* Attach this element to the grid area named header  */
+}
+
+#flexnavbar{
+    grid-area: nav; /* Attach this element to the grid area named nav */
+}
+
+main{
+    grid-area: main; /* Attach this element to the grid area named main */
+}
+
+footer{
+    grid-area: foot; /* Attach this element to the grid area named foot */
+}   
