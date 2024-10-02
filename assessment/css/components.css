@@ -1,0 +1,159 @@
+/* General Reset */
+body, h1, p, a, nav, footer, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply the Roboto font to the entire body */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6; /* Improved readability */
+    background-color: #F0F0F0; /* Light grey background for better readability */
+    color: #333333; /* Dark grey text for a balanced appearance */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #007BFF; /* Primary Blue for a modern tech look */
+    color: #FFFFFF; /* White text for high contrast */
+    padding: 15px 20px;
+}
+
+/* Navbar Container */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Search Bar Styling */
+.navbar-search {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.navbar-search input {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #6C757D; /* Grey border for input */
+    margin-right: 5px;
+}
+
+.navbar-search button {
+    background-color: #39FF14; /* Neon Green for emphasis */
+    color: #000000;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Login/Signup Buttons */
+.navbar-auth {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.button-login, .button-signup {
+    padding: 8px 15px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.button-login {
+    background-color: #6C757D; /* Grey for subtle appearance */
+    color: #FFFFFF;
+}
+
+.button-signup {
+    background-color: #007BFF; /* Primary Blue for emphasis */
+    color: #FFFFFF;
+}
+
+.button-login:hover, .button-signup:hover {
+    opacity: 0.8; /* Hover effect for both buttons */
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .navbar-container {
+        flex-direction: row;
+    }
+
+    .navbar-links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navbar-toggle {
+        display: none; /* Hide the hamburger menu on larger screens */
+    }
+
+    .navbar-search, .navbar-auth {
+        margin-top: 0;
+    }
+}
+
+/* Brand Logo */
+.brand-logo a {
+    font-weight: 700; /* Bold for emphasis */
+    font-size: 20px;
+    color: #FFFFFF; /* White for brand visibility */
+    text-decoration: none;
+}
+
+/* Navbar Toggle Button (Hamburger Menu) */
+.navbar-toggle {
+    background: none;
+    border: none;
+    color: #FFFFFF; /* White for visibility */
+    font-size: 24px;
+    cursor: pointer;
+    display: block; /* Visible for mobile */
+}
+
+/* Navigation Links */
+.navbar-links {
+    display: none; /* Hidden by default on mobile */
+    flex-direction: column; /* Vertical layout for mobile */
+    text-align: center;
+}
+
+.navbar-links a {
+    color: #FFFFFF; /* White text for links */
+    text-decoration: none;
+    margin: 10px 0; /* Spacing between links */
+    font-size: 18px;
+    font-weight: 500; /* Medium weight for readability */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #222222; /* Dark grey for footer contrast */
+    color: #FFFFFF; /* White for readability */
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #39FF14; /* Neon Green for link emphasis */
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Underline on hover for visual feedback */
+}

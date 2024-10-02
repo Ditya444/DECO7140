@@ -2,11 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-
-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- link the manifest file -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#ABD451" />
+
+    <!-- service worker registration -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/serviceWorker.js")
+            .then((registration) => {
+              console.log(
+                "Service Worker registered with scope: ",
+                registration.scope
+              );
+            })
+            .catch((error) => {
+              console.log("Service Worker registration failed: ", error);
+            });
+        });
+      }
+    </script>
+
     <title>Home Page</title>
   </head>
 
@@ -22,11 +42,10 @@ scale=1.0"
     <main>
       <p><a href="practice/index.html">Practice Project</a></p>
       <p><a href="assessment/index.html">Assessment Project</a></p>
-      </main>
+    </main>
 
     <footer>
       <p>&copy; 2024 Aditya Bayuprasetyo. All rights reserved.</p>
     </footer>
   </body>
 </html>
-         

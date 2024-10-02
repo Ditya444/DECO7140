@@ -1,0 +1,26 @@
+{
+    "name": "My DECO7140 Website",
+    "short_name": "Game Technology",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ABD451",
+    "description": "A progressive web app version of Final Project DECO7140 Website",
+    "icons": [
+        {
+            "src": "/icons/mecha_icon_test_48px.jpg",
+            "sizes": "48x48",
+            "type": "image/jpg"
+        },
+        {
+            "src": "/icons/mecha_icon_test_192px.jpg",
+            "sizes": "192x192",
+            "type": "image/jpg"
+        },
+        {
+            "src": "/icons/mecha_icon_test_512px.jpg",
+            "sizes": "512x512",
+            "type": "image/jpg"
+        }
+    ]
+}

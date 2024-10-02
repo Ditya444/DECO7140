@@ -1,0 +1,30 @@
+/* Mobile First Navbar - Default */
+#navbar-links.open {
+    display: flex; /* Show links when open */
+}
+
+/* Desktop Layout - Media Query for Larger Screens */
+@media (min-width: 768px) {
+    .navbar-container {
+        flex-direction: row; /* Horizontal layout on desktop */
+    }
+
+    .navbar-links {
+        display: flex; /* Always show links on desktop */
+        flex-direction: row;
+    }
+
+    .navbar-toggle {
+        display: none; /* Hide toggle button on desktop */
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-links {
+        margin: 0;
+    }
+}
