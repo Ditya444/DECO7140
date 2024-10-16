@@ -1,55 +1,46 @@
-#flexnavbar {
-    display: flex; /*Turn this element into a flex container */
-    flex-flow: row wrap; /*Content flows left to right and wrap if needed */
-    justify-content: space-around; /*Extra space is added around each element*/
+/* General body text */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100; /* Default weight */
+    color: #333333; /* Dark grey for readability */
+    line-height: 1.0; /* Good line height for readability */
 }
 
-/* Select all the <a> elements inside my #flexnavbar container */
-#flexnavbar > a {
-    flex:1; /* Each element tries to take up an equal amount of space */
+/* Headings (Bold) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; /* Bold weight for headings */
+    color: #000000; /* Black color for strong headings */
 }
 
-/* Define a breakpoint for all devices larger than 600px wide */
-@media screen and (min-width: 600px){
-    #flexnavbar {
-        justify-content: flex-end; /* Justify all items to the end */
-    }
-    
-    #flexnavbar > a {
-        flex: none; /* Elements will not shrink or grow */
-        padding: 3px 10px 3px 10px; /* add some padding to space things out */
-    }
-
-    #gridcontainer {
-        display: grid; /* Turn this element into a grid container */
-        height: 100vh; /* Make the grid container take up 100% of the window height */
-    
-        /* define the grid structure, and content of cells */
-        grid-template-areas:
-        "header header ."
-        "nav nav nav"
-        "main main main"    
-        "foot foot foot" ;
-    
-        grid-template-columns: 1fr 1fr 1fr; /* Set the columns width  */
-        grid-template-rows: auto 1fr auto auto; /* Set the row height  */
-    }
+/* Subheadings or section titles (Medium weight) */
+h2, h3 {
+    font-weight: 500; /* Medium weight for subheadings */
+    color: #007BFF; /* Example: Electric blue for subheadings */
 }
 
-
-
-header{
-    grid-area: header; /* Attach this element to the grid area named header  */
+/* Links and Buttons */
+a, button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500; /* Medium weight for links and buttons */
+    color: #FFFFFF; /* Example: White text for buttons or links */
 }
 
-#flexnavbar{
-    grid-area: nav; /* Attach this element to the grid area named nav */
+h1 {
+    font-size: 32px; /* Larger for main headings */
 }
 
-main{
-    grid-area: main; /* Attach this element to the grid area named main */
+h2 {
+    font-size: 28px; /* Slightly smaller for subheadings */
 }
 
-footer{
-    grid-area: foot; /* Attach this element to the grid area named foot */
-}   
+p {
+    font-size: 16px; /* Standard size for body text */
+    line-height: 1.6;
+    color: #333; /* Dark grey for body text */
+}
+
+button, a {
+    font-weight: 500; /* Medium for interactive elements */
+    text-transform: uppercase; /* Optional for buttons */
+}

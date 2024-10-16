@@ -1,30 +1,54 @@
-/* Mobile First Navbar - Default */
-#navbar-links.open {
-    display: flex; /* Show links when open */
-}
-
-/* Desktop Layout - Media Query for Larger Screens */
-@media (min-width: 768px) {
+/* Responsive adjustments for Testimonials and Newsletter */
+@media (max-width: 768px) {
     .navbar-container {
-        flex-direction: row; /* Horizontal layout on desktop */
+        flex-wrap: wrap;
+    }
+
+    .navbar-search {
+        margin-bottom: 10px;
+        width: 100%;
     }
 
     .navbar-links {
-        display: flex; /* Always show links on desktop */
-        flex-direction: row;
+        margin-bottom: 10px;
+        gap: 8px;
     }
 
-    .navbar-toggle {
-        display: none; /* Hide toggle button on desktop */
+    .navbar-login {
+        margin-top: 10px;
     }
 
-    .footer-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    /* Hero section */
+    .hero h1 {
+        font-size: 32px;
     }
 
-    .footer-links {
-        margin: 0;
+    .hero p {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+    }
+
+    /* Products & News Grid for Mobile */
+    .product-grid, .news-grid, .testimonial-grid {
+        flex-direction: column;
+    }
+
+    .product-item, .news-item, .testimonial-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Newsletter form */
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input[type="email"] {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%; /* Full width for mobile */
     }
 }
