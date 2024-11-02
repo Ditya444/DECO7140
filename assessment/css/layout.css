@@ -1,54 +1,522 @@
-/* Responsive adjustments for Testimonials and Newsletter */
+/* Mobile Navigation */
+
 @media (max-width: 768px) {
-    .navbar-container {
-        flex-wrap: wrap;
-    }
+  
+  /* Navbar Mobile */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 0.5px;
+    background-color: black;
+    width: 80px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 999;
+    text-align: center;
+  }
 
-    .navbar-search {
-        margin-bottom: 10px;
-        width: 100%;
-    }
+  .logo{
+    margin-left: 5px;
+  }
 
-    .navbar-links {
-        margin-bottom: 10px;
-        gap: 8px;
-    }
-
-    .navbar-login {
-        margin-top: 10px;
-    }
-
-    /* Hero section */
-    .hero h1 {
-        font-size: 32px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .cta-button {
-        padding: 10px 20px;
-    }
-
-    /* Products & News Grid for Mobile */
-    .product-grid, .news-grid, .testimonial-grid {
+  .nav-links ul {
         flex-direction: column;
+        gap: 15px;
+  }
+
+  .nav-links ul li a {
+      color: white;
+      font-size: 1em;
+      background-color: transparent;
+      white-space: normal;
+  }
+
+  .nav-links a:hover,
+  .nav-links a:focus {
+    color: #28a745;
+  }
+
+  .sign-up a:hover,
+  .sign-up a:focus {
+    background-color: darkgreen;
+  }
+
+  .menu-toggle {
+      display: block;
+      color: black;
+      font-size: 1.5em;
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-left: auto;
+      max-width: 120px;
+  }
+
+  .menu-toggle-active {
+    background-color: #28a745; /* Warna hijau */
+    font-weight: bold;
+  }
+
+  .nav-links.active {
+      display: block; /* Tampilkan nav link saat toggle diklik */
+  }
+
+  .nav-links .sign-up {
+    display: block;
+    margin-top: 10px; /* Beri jarak dari link navigasi */
+    width: auto;
+    text-align: center;
+    padding: 0.5em;
+  }
+  
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links a:hover,
+  .footer-links a:focus {
+    color: #28a745;
+  }
+
+ 
+  /* Mobile hero section */
+  .hero-section {
+    height: 60vh;
+  }
+
+  .hero-content {
+    padding: 0 20px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%; /* Memungkinkan teks untuk menyesuaikan lebar layar */
+  }
+
+  .headline {
+    font-size: 1.8em; /* Ukuran font headline yang lebih kecil */
+  }
+
+  .promo {
+    font-size: 1em; /* Ukuran font promo yang lebih kecil */
+  }
+
+  .cta-button {
+    padding: 10px 20px; /* Ukuran padding yang lebih kecil */
+    font-size: 0.9em; /* Ukuran font button lebih kecil */
+  }
+
+  /* Background image untuk memastikan sesuai layar */
+  .background-image {
+    background-size: cover;
+    background-position: center;
+  }
+
+    /* Tombol navigasi carousel untuk mobile */
+  .carousel-nav {
+    top: auto;
+    bottom: 15%;
+    width: 100%;
+  }
+
+  .carousel-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2em;
+    padding: 5px;
+  }
+
+  /* Progress Bar pada tampilan mobile */
+  .simple-progress-bar-container {
+    height: 3px; /* Lebih tipis untuk tampilan mobile */
+    bottom: 5px;
+  }
+
+  /* News section home page */
+  .news-section {
+    padding: 1rem;
+  }
+
+  .news-section h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .news-container {
+    gap: 1rem;
+  }
+
+  /* Main Featured News Item */
+  .news-item.featured {
+    height: 200px;
+  }
+
+  .news-item.featured .news-content h3 {
+    font-size: 1.5rem;
+  }
+
+  /* Smaller News Grid */
+  .news-grid {
+    grid-template-columns: 1fr; /* Menampilkan artikel dalam satu kolom */
+  }
+
+  .news-item {
+    flex-direction: row; /* Membuat gambar di kiri dan teks di kanan */
+    gap: 0.5rem;
+  }
+
+  .news-item img {
+    width: 80px;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .news-item .news-content {
+    padding: 0.3rem;
+  }
+
+  .news-item h4 {
+    font-size: 0.9rem;
+  }
+
+  /* Prodcut category section */
+  .product-category {
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .product-category h2 {
+    font-size: 1.5em;
+  }
+
+  /* Tab Navigation for Mobile */
+  .category-tabs {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dropdown-btn {
+    display: inline-block; /* Tampilkan tombol dropdown di mobile */
+    display: block;
+  }
+
+  .dropdown-content {
+    display: none; /* Sembunyikan dropdown pada mobile kecuali saat diaktifkan */
+    flex-direction: column;
+    width: 90%;
+    background-color: var(--white-color);
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  .dropdown-content .tab {
+    width: 100%;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    margin-bottom: 5px;
+  }
+
+  /* Offers Container for Mobile */
+  .offers-container {
+    width: 90%;
+    flex-direction: column; /* Stack items vertically */
+    gap: 15px;
+    align-items: center;
+  }
+
+  .offer-item {
+    width: 100%; /* Full width on mobile */
+    padding: 15px;
+    /* margin-left: 15px; */
+  }
+
+  .offer-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .offer-item p {
+    font-size: 0.9em;
+  }
+
+  /* Community Homepage Mobile */
+  .community-section {
+    padding: 20px;
+  }
+
+  .community-section h2 {
+    font-size: 1.8em;
+  }
+
+  .discussion-item {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .discussion-item h3 {
+    font-size: 1.3em;
+  }
+
+  .discussion-item p {
+    font-size: 0.9em;
+  }
+
+  /* News page mobile */
+    /* Trending News Section */
+    .trending-news {
+      max-width: 85%; /* Sesuaikan lebar untuk perangkat mobile */
+      padding: 1rem;
+      margin-top: 8rem; /* Kurangi jarak di bagian atas */
+    }
+  
+    .trending-news h2 {
+      font-size: 1.5rem; /* Perkecil ukuran font judul */
+      text-align: center;
+    }
+  
+    .trending-image {
+      max-height: 200px; /* Kurangi tinggi maksimum gambar pada perangkat kecil */
+    }
+  
+    .trending-description {
+      font-size: 0.9rem;
+      padding: 0.8rem;
+      max-width: 90%; /* Sesuaikan ukuran kontainer deskripsi */
+      bottom: -10px; /* Kurangi jarak dari bawah */
+    }
+  
+    /* News Page Section */
+    .news-page {
+      padding: 1rem;
+      max-width: 90%; /* Sesuaikan lebar */
+    }
+  
+    .news-page h2 {
+      font-size: 1.3rem; /* Perkecil ukuran font judul */
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+  
+    /* News List */
+    .news-list {
+      gap: 0.5rem; /* Kurangi jarak antar item */
+    }
+  
+    /* Individual News Item */
+    .news-latest {
+      flex-direction: column; /* Ubah arah ke kolom untuk gambar di atas teks */
+      align-items: center; /* Pusatkan konten */
+      padding: 0.8rem;
+    }
+  
+    .news-latest img {
+      width: 100%; /* Lebar penuh pada perangkat mobile */
+      height: auto;
+      border-radius: 8px;
+    }
+  
+    .news-info {
+      margin-top: 0.5rem;
+    }
+  
+    .news-info h4 {
+      font-size: 0.95rem; /* Perkecil ukuran font judul berita */
+      text-align: center;
+    }
+  
+    .news-info p {
+      font-size: 0.85rem; /* Sesuaikan ukuran font deskripsi */
+      text-align: center;
+      /* -webkit-line-clamp: 3; */
+    }
+  
+    .news-meta {
+      font-size: 0.75rem; /* Sesuaikan ukuran font meta */
+      justify-content: center;
+    }
+  
+    /* See more news button */
+    .see-more-button {
+      padding: 8px 16px; /* Kurangi ukuran tombol */
+      font-size: 0.9rem;
     }
 
-    .product-item, .news-item, .testimonial-item {
-        width: 100%;
-        margin-bottom: 20px;
+    /* Producte Category Page Mobile */
+    .accessories-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .accessory-item.large {
+      grid-column: span 1;
+      grid-row: span 1;
     }
 
-    /* Newsletter form */
-    .newsletter-form {
-        flex-direction: column;
+    /* Guide and tips mobile design */
+    .guide-page {
+      padding: 1rem;
+    }
+  
+    .guides-header h2 {
+      font-size: 2rem;
+      text-align: center;
+    }
+  
+    .guides-header p {
+      font-size: 1rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+  
+    .my-guides {
+      margin-top: 1.5rem;
+    }
+  
+    .my-guides-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .my-guides-header h3 {
+      font-size: 1.5rem;
+    }
+  
+    .see-all-link {
+      font-size: 0.9rem;
+      align-self: flex-end;
+      margin-top: 0.5rem;
+    }
+  
+    .add-game {
+      width: 87%;
+      padding: 1.5rem;
+      margin-top: 20px;
+    }
+  
+    .add-game-icon {
+      width: 40px;
+      height: 40px;
+      font-size: 1.5rem;
+    }
+  
+    .add-game p {
+      font-size: 0.9rem;
     }
 
-    .newsletter-form input[type="email"] {
-        margin-right: 0;
-        margin-bottom: 10px;
-        width: 100%; /* Full width for mobile */
-    }
+    /* Community Mobile Design */
+      .hero-forum {
+    padding: 1.5rem;
+    margin-top: 5vh;
+    max-width: 90%;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .forum-icon {
+    width: 20%;
+  }
+
+  .forum-button {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  /* Forum List Section */
+  .hero-forum {
+    margin-top: 5em;
+  }
+
+  .forum-page {
+    margin-left: -1em;
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+
+  .forum-page h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .forum-list {
+    grid-template-columns: 1fr; /* Single-column layout on smaller screens */
+    gap: 1rem;
+  }
+
+  /* Product/Discussion Items */
+  .product {
+    padding: 1rem;
+    text-align: center; /* Center-align text for smaller screens */
+  }
+
+  .product h3 {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+  }
+
+  .product p {
+    font-size: 0.9rem;
+  }
+
+  .product ul {
+    padding-left: 1rem; /* Smaller padding for mobile */
+  }
+
+  .product img {
+    width: 100%;
+    height: auto;
+    margin-top: 0.5rem;
+  }
+
+  /* Form Section */
+  .form-section {
+    padding: 1.5rem;
+    max-width: 80%;
+  }
+
+  .form-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-section label {
+    font-size: 0.9rem;
+  }
+
+  .form-section input,
+  .form-section textarea {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .form-section button {
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  /* Response Message */
+  #response-message {
+    font-size: 0.9rem;
+  }
+
+  /* Footer adjustments */
+  .footer {
+    padding: 1rem;
+  }
+
+  .footer-branding p,
+  .footer-links a {
+    font-size: 0.8rem;
+  }
 }
+  

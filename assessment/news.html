@@ -2,26 +2,213 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-
-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link CSS Files -->
+    <link rel="stylesheet" href="css/css_reset.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/css_reset.css" />
     <link rel="stylesheet" href="css/layout.css" />
-    <title>Page Title</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>News page</title>
   </head>
   <body>
-    <header>
-      <h1>Pete's assessment project page</h1>
+    <header id="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img src="img/Game Tech Logo.png" alt="Navbar Logo" />
+        </a>
+
+        <nav class="nav-links" id="nav-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="products.html">Products Category</a></li>
+            <li><a href="guide.html">Guide and TIps</a></li>
+            <li><a href="community.html">Community</a></li>
+          </ul>
+          <button class="sign-up">Sign Up</button>
+        </nav>
+
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      </div>
     </header>
+
     <main>
-      <p><a href="../index.html">Home</a></p>
+      <!-- Trending News Section -->
+      <section class="trending-news">
+        <h2><span>📈</span> Trending News</h2>
+        <div class="trending-image">
+          <img src="img/ps5-pro-30th.jpg" alt="Trending News Image" />
+          <div class="trending-description">
+            <p>
+              <strong> New PS5 Pro </strong>
+              Special 30th Anniversary Edition Is Starting To Sell Out
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="news-page">
+        <h2>Latest News</h2>
+        <div class="news-collection">
+          <div class="news-list">
+            <article class="news-latest">
+              <img src="img/intel-motherboard.avif" alt="Image News 1" />
+              <div class="news-info">
+                <span class="news-category">Computer</span>
+                <h4>
+                  Intel rises on recovery hopes as it forecasts revenue above
+                  estimates
+                </h4>
+                <p>
+                  Intel's stock sees an uptick as the company forecasts revenue
+                  surpassing expectations, fueling optimism for a recovery. This
+                  positive outlook, driven by strong demand and strategic
+                  improvements, boosts investor confidence in Intel's growth
+                  potential."
+                </p>
+                <div class="news-meta">
+                  <span>By Josh Coulson</span> | <span>1 hour ago</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="news-latest">
+              <img src="img/apple-iphone.jpg" alt="Image News 2" />
+              <div class="news-info">
+                <span class="news-category">Mobile</span>
+                <h4>The upcoming iPhone might use Apple's own Wi-Fi chips</h4>
+                <p>
+                  Apple is reportedly planning to integrate its proprietary
+                  Wi-Fi chips into the iPhone 17 series, expected in the latter
+                  half of 2025.
+                </p>
+                <div class="news-meta">
+                  <span>By Josh Coulson</span> | <span>2 hours ago</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="news-latest">
+              <img src="img/handheld-gaming.jpg" alt="Image News 3" />
+              <div class="news-info">
+                <span class="news-category">Computer</span>
+                <h4>
+                  AMD's top Ryzen AI mobile chip featuring Zen 5 and a juiced
+                  GPU is headed to a handheld gaming PC next month
+                </h4>
+                <p>
+                  AMD's flagship mobile processor, the Ryzen AI 9 HX 370, is set
+                  to power the upcoming OneXFly F1 Pro handheld gaming PC,
+                  scheduled for release in December 2024.
+                </p>
+                <div class="news-meta">
+                  <span>By Josh Coulson</span> | <span>3 hours ago</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="news-latest">
+              <img src="img/Meta-vr.webp" alt="Image News 4" />
+              <div class="news-info">
+                <span class="news-category">Virtual Reality</span>
+                <h4>Meta Quest 3S Vs 2: A Hands-On Comparison</h4>
+                <p>
+                  The Meta Quest 3S and Meta Quest 2 are both standalone VR
+                  headsets from Meta, each offering unique features and
+                  performance levels.
+                </p>
+                <div class="news-meta">
+                  <span>By Josh Coulson</span> | <span>4 hours ago</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="news-latest">
+              <img src="img/lenovo-legion.jpg" alt="Image News 5" />
+              <div class="news-info">
+                <span class="news-category">Laptop</span>
+                <h4>
+                  This Lenovo gaming laptop with RTX 4060 is just $750 right now
+                </h4>
+                <p>
+                  This 15.6-inch gaming laptop offers plenty of power, RAM,
+                  ports, upgrade options — and it's on sale at Best Buy.
+                </p>
+                <div class="news-meta">
+                  <span>By Josh Coulson</span> | <span>5 hours ago</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="news-latest">
+              <img src="img/croc-remaster.jpg" alt="Image News 6" />
+              <div class="news-info">
+                <span class="news-category">Console</span>
+                <h4>
+                  Croc Remaster Devs Confirm December Release Window,
+                  Collector's Edition Revealed
+                </h4>
+                <p>
+                  Croc is still on track to be here by the holidays, but
+                  Argonaut isn’t afraid to push that target to make sure the
+                  remaster is the best it can be.
+                </p>
+                <div class="news-meta">
+                  <span>By Josh Coulson</span> | <span>2 hours ago</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Tambahkan artikel berita lainnya sesuai kebutuhan -->
+          </div>
+          <div class="see-more-container">
+            <button class="see-more-button">SEE MORE</button>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer>
-      <p>&copy; 2024 Your Name. All rights reserved.</p>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Media Sosial -->
+        <div class="footer-social">
+          <hr class="divider" />
+          <div class="social-icons">
+            <a href="#"><img src="img/facebook.png" alt="Facebook" /></a>
+            <a href="#"><img src="img/instagram.png" alt="Instagram" /></a>
+            <a href="#"><img src="img/youtube.png" alt="YouTube" /></a>
+            <a href="#"><img src="img/twitter.png" alt="Twitter" /></a>
+            <a href="#"><img src="img/linkedin.png" alt="LinkedIn" /></a>
+            <a href="#"><img src="img/tiktok.png" alt="TikTok" /></a>
+          </div>
+          <hr class="divider" />
+        </div>
+
+        <!-- Copyright dan Logo -->
+        <div class="footer-branding">
+          <img src="img/Game Tech Logo.png" alt="Logo" class="footer-logo" />
+          <p>&copy; 2024 Game Tech. All rights reserved.</p>
+        </div>
+
+        <!-- Tautan Penting -->
+        <div class="footer-links">
+          <a href="#">Legal Stuff</a> | <a href="#">Privacy Policy</a> |
+          <a href="#">Security</a> | <a href="#">Website Accessibility</a> |
+          <a href="#">Manage Cookies</a>
+        </div>
+      </div>
     </footer>
+
+    <!-- News JS File -->
+    <script src="js/news.js" defer></script>
+    <script src="js/page_load_message.js" defer></script>
   </body>
 </html>

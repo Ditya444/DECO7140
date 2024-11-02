@@ -2,26 +2,147 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-
-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link CSS Files -->
+    <link rel="stylesheet" href="css/css_reset.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/css_reset.css" />
     <link rel="stylesheet" href="css/layout.css" />
-    <title>Page Title</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Product page</title>
   </head>
   <body>
-    <header>
-      <h1>Pete's assessment project page</h1>
+    <header id="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img src="img/Game Tech Logo.png" alt="Navbar Logo" />
+        </a>
+
+        <nav class="nav-links" id="nav-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="products.html">Products Category</a></li>
+            <li><a href="guide.html">Guide and Tips</a></li>
+            <li><a href="community.html">Community</a></li>
+          </ul>
+          <button class="sign-up">Sign Up</button>
+        </nav>
+
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      </div>
     </header>
+
     <main>
-      <p><a href="../index.html">Home</a></p>
+      <section class="product-search">
+        <h2>Find your Product</h2>
+        <div class="search-bar">
+          <input type="text" placeholder="Search accessories" />
+          <button class="search-icon">🔍</button>
+        </div>
+        <div class="category-icons">
+          <div class="category-item">
+            <a href="products.html">
+              <img src="img/Mobile.jpg" alt="Mobile" />
+            </a>
+            <p>Mobile</p>
+          </div>
+          <div class="category-item">
+            <a href="products.html">
+              <img src="img/Virtual-Reality.jpg" alt="Virtual Reality" />
+            </a>
+            <p>Virtual Reality</p>
+          </div>
+          <div class="category-item">
+            <a href="products.html">
+              <img src="img/Console.jpg" alt="Console" />
+            </a>
+            <p>Console</p>
+          </div>
+          <div class="category-item">
+            <a href="products.html">
+              <img src="img/PC.jpg" alt="Computer" />
+            </a>
+            <p>Computer</p>
+          </div>
+          <div class="category-item">
+            <a href="products.html">
+              <img src="img/Laptop.jpg" alt="Laptop" />
+            </a>
+            <p>Laptop</p>
+          </div>
+          <!-- Add more categories as needed -->
+        </div>
+      </section>
+
+      <section class="featured-accessories">
+        <h2>Latest Technology and Gadget</h2>
+        <p>Take a closer look for the newest technology.</p>
+        <div class="accessories-grid">
+          <div class="accessory-item">
+            <img src="img/iphon16.jpg" alt="acc 1" />
+            <p>iPhone 16 pro</p>
+          </div>
+          <div class="accessory-item">
+            <img src="img/metaquest3s.jpeg" alt="acc 2" />
+            <p>Meta Quest 3s</p>
+          </div>
+          <div class="accessory-item large">
+            <img src="img/ps5pro.jpg" alt="acc 3" />
+            <p>PS5 Pro</p>
+          </div>
+          <div class="accessory-item">
+            <img src="img/rx7900xtx.jpg" alt="acc 4" />
+            <p>AMD Radeon RX 7900 XTX</p>
+          </div>
+          <div class="accessory-item">
+            <img src="img/asusrogstrix.webp" alt="acc 5" />
+            <p>Asus ROG Strix Scar 17 X3D</p>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer>
-      <p>&copy; 2024 Your Name. All rights reserved.</p>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Media Sosial -->
+        <div class="footer-social">
+          <hr class="divider" />
+          <div class="social-icons">
+            <a href="#"><img src="img/facebook.png" alt="Facebook" /></a>
+            <a href="#"><img src="img/instagram.png" alt="Instagram" /></a>
+            <a href="#"><img src="img/youtube.png" alt="YouTube" /></a>
+            <a href="#"><img src="img/twitter.png" alt="Twitter" /></a>
+            <a href="#"><img src="img/linkedin.png" alt="LinkedIn" /></a>
+            <a href="#"><img src="img/tiktok.png" alt="TikTok" /></a>
+          </div>
+          <hr class="divider" />
+        </div>
+
+        <!-- Copyright dan Logo -->
+        <div class="footer-branding">
+          <img src="img/Game Tech Logo.png" alt="Logo" class="footer-logo" />
+          <p>&copy; 2024 Game Tech. All rights reserved.</p>
+        </div>
+
+        <!-- Tautan Penting -->
+        <div class="footer-links">
+          <a href="#">Legal Stuff</a> | <a href="#">Privacy Policy</a> |
+          <a href="#">Security</a> | <a href="#">Website Accessibility</a> |
+          <a href="#">Manage Cookies</a>
+        </div>
+      </div>
     </footer>
+
+    <!-- News JS File -->
+    <script src="js/products.js" defer></script>
+    <script src="js/page_load_message.js" defer></script>
   </body>
 </html>

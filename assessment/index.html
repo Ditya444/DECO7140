@@ -3,169 +3,413 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Link CSS Files -->
     <link rel="stylesheet" href="css/css_reset.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/layout.css" />
 
-    <!-- Roboto Font -->
+    <!-- Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Material Symbols (Search Icon) -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
-
-    <title>Gaming Hardware Hub</title>
+    <title>Home page</title>
   </head>
+
   <body>
-    <!-- Navbar -->
-    <header class="navbar">
-      <div class="navbar-container">
-        <!-- Logo -->
-        <div class="brand-logo">
-          <a href="index.html"
-            ><img src="image/Game Tech Logo.png" alt="Brand Logo"
-          /></a>
-        </div>
+    <header id="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img src="img/Game Tech Logo.png" alt="Navbar Logo" />
+        </a>
 
-        <!-- Search Bar -->
-        <div class="navbar-search">
-          <input type="text" placeholder="search..." id="search-bar" />
-          <button id="search-button">
-            <span class="material-symbols-outlined">search</span>
-          </button>
-        </div>
-
-        <!-- Navigation Links -->
-        <nav class="navbar-links" id="navbar-links">
-          <a href="index.html">Home</a>
-          <a href="news.html">News</a>
-          <a href="#">Features/Products</a>
-          <a href="#">Community</a>
-          <a href="#">Guide and Tips</a>
+        <nav class="nav-links" id="nav-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="products.html">Products Category</a></li>
+            <li><a href="guide.html">Guide and Tips</a></li>
+            <li><a href="community.html">Community</a></li>
+          </ul>
+          <button class="sign-up">Sign Up</button>
         </nav>
 
-        <!-- Login Button -->
-        <a href="#login" class="navbar-login">Login</a>
-
-        <!-- Mobile Menu Toggle Button (hamburger) -->
-        <button class="navbar-toggle" id="navbar-toggle">☰</button>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Welcome to the Gaming Hardware Hub</h1>
-        <p>
-          Discover the latest in gaming technology, from graphics cards to
-          accessories.
-        </p>
-        <a href="features.html" class="cta-button">Explore Now</a>
-      </div>
-    </section>
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <!-- Slide 1 -->
+        <div class="hero-slide active">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1 class="headline">Welcome to GameTech</h1>
+              <p class="promo">
+                Find all the latest information about technology and gadget
+              </p>
+              <a href="about.html">
+                <button class="cta-button">News</button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="background-image"
+            style="background-image: url('img/hero-slide-1.jpg')"
+          ></div>
+        </div>
 
-    <!-- Popular Products Section -->
-    <section class="popular-products">
-      <h2>Popular Gaming Products</h2>
-      <div class="product-grid">
-        <div class="product-item">
-          <img src="image/product1.jpg" alt="Product 1" />
-          <h3>Gaming Laptop</h3>
-          <p>Powerful gaming laptop with high-performance GPU.</p>
+        <!-- Slide 2 -->
+        <div class="hero-slide">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1 class="headline">Find the Technology and Gadget</h1>
+              <p class="promo">
+                Find the review, specification, price and specific information
+                related to the products
+              </p>
+              <a href="products.html">
+                <button class="cta-button">Explore the technology</button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="background-image"
+            style="background-image: url('img/hero-slide-2.jpg')"
+          ></div>
         </div>
-        <div class="product-item">
-          <img src="image/product2.jpg" alt="Product 2" />
-          <h3>Gaming Mouse</h3>
-          <p>Ergonomic mouse with customizable buttons.</p>
+
+        <!-- Slide 3 -->
+        <div class="hero-slide">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1 class="headline">Community Sharing</h1>
+              <p class="promo">
+                Share your experience and review with the Community
+              </p>
+              <a href="community.html">
+                <button class="cta-button">Forum page</button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="background-image"
+            style="background-image: url('img/hero-slide-3.png')"
+          ></div>
         </div>
-        <div class="product-item">
-          <img src="image/product3.jpg" alt="Product 3" />
-          <h3>Mechanical Keyboard</h3>
-          <p>Durable keyboard with tactile feedback.</p>
+
+        <!-- Navigasi Carousel -->
+        <div class="carousel-nav">
+          <button class="carousel-btn prev">❮</button>
+          <button class="carousel-btn next">❯</button>
+        </div>
+
+        <!-- Indikator Progress -->
+        <div class="simple-progress-bar-container">
+          <div class="simple-progress-bar"></div>
+        </div>
+      </section>
+
+      <!-- News Section -->
+      <section class="news-section">
+        <h2>News</h2>
+        <div class="news-container">
+          <!-- Main Featured News Item -->
+          <article class="news-item featured">
+            <a href="news.html">
+              <img src="img/ps5-pro-30th.jpg" alt="Featured News" />
+            </a>
+            <div class="news-content">
+              <h3>
+                New PS5 Pro Special 30th Anniversary Edition Is Starting To Sell
+                Out
+              </h3>
+            </div>
+          </article>
+
+          <!-- Smaller News Items -->
+          <div class="news-grid">
+            <article class="news-item">
+              <a href="news.html">
+                <img src="img/intel-motherboard.avif" alt="News 1" />
+              </a>
+              <div class="news-content">
+                <h4>
+                  Intel rises on recovery hopes as it forecasts revenue above
+                  estimates
+                </h4>
+              </div>
+            </article>
+
+            <article class="news-item">
+              <a href="news.html">
+                <img src="img/apple-iphone.jpg" alt="News 2" />
+              </a>
+              <div class="news-content">
+                <h4>The upcoming iPhone might use Apple's own Wi-Fi chips</h4>
+              </div>
+            </article>
+
+            <article class="news-item">
+              <a href="news.html">
+                <img src="img/handheld-gaming.jpg" alt="News 3" />
+              </a>
+              <div class="news-content">
+                <h4>
+                  AMD's top Ryzen AI mobile chip featuring Zen 5 and a juiced
+                  GPU is headed to a handheld gaming PC next month
+                </h4>
+              </div>
+            </article>
+
+            <article class="news-item">
+              <a href="news.html">
+                <img src="img/Meta-vr.webp" alt="News 4" />
+              </a>
+              <div class="news-content">
+                <h4>Meta Quest 3S Vs 2: A Hands-On Comparison</h4>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Product Category Section -->
+      <section class="product-category">
+        <h2>Products Category</h2>
+
+        <!-- Tav Navigation -->
+        <nav class="category-tabs">
+          <button class="dropdown-btn" onclick="toggleDropdown()">
+            Select Category
+          </button>
+          <div class="dropdown-content" id="dropdown-content">
+            <button
+              class="tab active"
+              data-category="offers"
+              onclick="selectCategory('Latest Technology')"
+            >
+              Latest Technology
+            </button>
+            <button
+              class="tab"
+              data-category="mobile"
+              onclick="selectCategory('Mobile')"
+            >
+              Mobile
+            </button>
+            <button
+              class="tab"
+              data-category="vr"
+              onclick="selectCategory('Virtual Reality')"
+            >
+              Virtual Reality
+            </button>
+            <button
+              class="tab"
+              data-category="console"
+              onclick="selectCategory('Console')"
+            >
+              Console
+            </button>
+            <button
+              class="tab"
+              data-category="computer"
+              onclick="selectCategory('Computer')"
+            >
+              Computer
+            </button>
+            <button
+              class="tab"
+              data-category="laptop"
+              onclick="selectCategory('Laptop')"
+            >
+              Laptop
+            </button>
+          </div>
+        </nav>
+
+        <!-- Offer Items Container -->
+        <div class="offers-container">
+          <div class="offer-item" data-category="latest">
+            <a href="products.html">
+              <img src="img/vr-test.png" alt="Offer 1" />
+            </a>
+            <h3>Latest Product</h3>
+            <p>The latest trend for gadgets all over the world</p>
+          </div>
+
+          <div class="offer-item" data-category="mobile">
+            <a href="products.html">
+              <img src="img/galaxy-zfold6.jpg" alt="Offer 2" />
+            </a>
+            <h3>The New Flip Phone</h3>
+            <p>New flip phone that bring innovation to smartphone design</p>
+          </div>
+
+          <div class="offer-item" data-category="vr">
+            <a href="products.html">
+              <img src="img/apple-vision-pro.jpg" alt="Offer 3" />
+            </a>
+            <h3>Apple Vision Pro</h3>
+            <p>Newest vr headset from Apple</p>
+          </div>
+
+          <div class="offer-item" data-category="console">
+            <a href="products.html">
+              <img src="img/ps5-pro.webp" alt="Offer 4" />
+            </a>
+            <h3>PS5 Pro</h3>
+            <p>The PS5 Pro specification</p>
+          </div>
+
+          <div class="offer-item" data-category="computer">
+            <a href="products.html">
+              <img src="img/amd-threadripper.avif" alt="Offer 5" />
+            </a>
+            <h3>AMD Thereadripper</h3>
+            <p>The best current cpu</p>
+          </div>
+
+          <div class="offer-item" data-category="laptop">
+            <a href="products.html">
+              <img src="img/lenovo-legion.jpg" alt="Offer 6" />
+            </a>
+            <h3>Lenovo Legion</h3>
+            <p>Gaming laptop from Lenovo</p>
+          </div>
+          <!-- Add more offer items as needed -->
+        </div>
+      </section>
+
+      <!-- Guide and Tips section -->
+      <section class="news-section">
+        <h2>Guide, Tips, and Review</h2>
+        <div class="news-container">
+          <div class="news-grid">
+            <article class="news-item">
+              <a href="guide.html">
+                <img src="img/future-proof.png" alt="G and T 1" />
+              </a>
+              <div class="news-content">
+                <h4>Best Strategies for ‘Future Proofing’ Your computer</h4>
+              </div>
+            </article>
+
+            <article class="news-item">
+              <a href="guide.html">
+                <img src="img/logitech-g915.webp" alt="G and T 2" />
+              </a>
+              <div class="news-content">
+                <h4>Logitech G915 X Lightspeed review</h4>
+              </div>
+            </article>
+
+            <article class="news-item">
+              <a href="guide.html">
+                <img src="img/laptop-gpu.jpeg" alt="G and T 3" />
+              </a>
+              <div class="news-content">
+                <h4>
+                  Best graphics card for laptops in 2024: the mobile GPUs I'd
+                  want in my next gaming laptop
+                </h4>
+              </div>
+            </article>
+
+            <article class="news-item">
+              <a href="guide.html">
+                <img src="img/build-pc.webp" alt="G & T 4" />
+              </a>
+              <div class="news-content">
+                <h4>How to Build a PC: The Ultimate Beginner's Guide</h4>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Community Section -->
+      <section class="community-section">
+        <h2>Community Discussions</h2>
+
+        <!-- Topik Diskusi 1 -->
+        <div class="discussion-item">
+          <a href="community.html">
+            <h3>What's the best budget smartphone in 2024?</h3>
+            <p>
+              Summary: Community members are debating which budget smartphone
+              offers the best value for money in 2024. The top contenders
+              include the Samsung Galaxy A54, Google Pixel 7a, and Xiaomi Redmi
+              Note 12.
+            </p>
+          </a>
+        </div>
+
+        <!-- Topik Diskusi 2 -->
+        <div class="discussion-item">
+          <a href="community.html">
+            <h3>Tips for setting up a home network</h3>
+            <p>
+              Summary: This thread includes advice on configuring a home network
+              with routers, extenders, and secure access points to ensure a fast
+              and secure connection throughout the house.
+            </p>
+          </a>
+        </div>
+
+        <!-- Topik Diskusi 3 -->
+        <div class="discussion-item">
+          <a href="community.html">
+            <h3>Best practices for data privacy in 2024</h3>
+            <p>
+              Summary: A lively discussion on data privacy tips, including the
+              best VPNs, password managers, and secure cloud storage solutions.
+            </p>
+          </a>
+        </div>
+
+        <!-- Tambahkan lebih banyak topik diskusi sesuai kebutuhan -->
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Media Sosial -->
+        <div class="footer-social">
+          <hr class="divider" />
+          <div class="social-icons">
+            <a href="#"><img src="img/facebook.png" alt="Facebook" /></a>
+            <a href="#"><img src="img/instagram.png" alt="Instagram" /></a>
+            <a href="#"><img src="img/youtube.png" alt="YouTube" /></a>
+            <a href="#"><img src="img/twitter.png" alt="Twitter" /></a>
+            <a href="#"><img src="img/linkedin.png" alt="LinkedIn" /></a>
+            <a href="#"><img src="img/tiktok.png" alt="TikTok" /></a>
+          </div>
+          <hr class="divider" />
+        </div>
+
+        <!-- Copyright dan Logo -->
+        <div class="footer-branding">
+          <img src="img/Game Tech Logo.png" alt="Logo" class="footer-logo" />
+          <p>&copy; 2024 Game Tech. All rights reserved.</p>
+        </div>
+
+        <!-- Tautan Penting -->
+        <div class="footer-links">
+          <a href="#">Legal Stuff</a> | <a href="#">Privacy Policy</a> |
+          <a href="#">Security</a> | <a href="#">Website Accessibility</a> |
+          <a href="#">Manage Cookies</a>
         </div>
       </div>
-    </section>
-
-    <!-- Latest News Section -->
-    <section class="latest-news">
-      <h2>Latest Gaming News</h2>
-      <div class="news-grid">
-        <div class="news-item">
-          <h3><a href="news.html">New Gaming Laptops Released</a></h3>
-          <p>
-            Top brands release their new gaming laptops with cutting-edge
-            technology.
-          </p>
-        </div>
-        <div class="news-item">
-          <h3><a href="news.html">Top 10 Mechanical Keyboards in 2024</a></h3>
-          <p>A rundown of the best mechanical keyboards for gamers in 2024.</p>
-        </div>
-        <div class="news-item">
-          <h3><a href="news.html">Upcoming Gaming Headsets</a></h3>
-          <p>Next-gen gaming headsets with surround sound are coming soon.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonial Section -->
-    <section class="testimonials">
-      <h2>What Gamers Are Saying</h2>
-      <div class="testimonial-grid">
-        <div class="testimonial-item">
-          <p>
-            "The best place to discover new gaming gear! I found my dream
-            setup."
-          </p>
-          <h4>- Alex, Pro Gamer</h4>
-        </div>
-        <div class="testimonial-item">
-          <p>
-            "Amazing range of products, and the guides helped me make the right
-            choice."
-          </p>
-          <h4>- Jamie, Tech Enthusiast</h4>
-        </div>
-        <div class="testimonial-item">
-          <p>
-            "I love the in-depth reviews and latest news on gaming hardware."
-          </p>
-          <h4>- Sam, Streamer</h4>
-        </div>
-      </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section class="newsletter">
-      <h2>Subscribe to Our Newsletter</h2>
-      <p>
-        Get the latest gaming hardware news and updates straight to your inbox.
-      </p>
-      <form class="newsletter-form">
-        <input type="email" placeholder="Enter your email" required />
-        <button type="submit" class="cta-button">Subscribe</button>
-      </form>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      <div class="footer-links">
-        <a href="#">About Us</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="contact.html">Contact Us</a>
-      </div>
-      <p>&copy; 2024 Gaming Hardware Hub. All rights reserved.</p>
     </footer>
 
-    <!-- Link JavaScript Files -->
-    <script src="js/index.js"></script>
+    <!-- Index JS File -->
+    <script src="js/index.js" defer></script>
+    <script src="js/page_load_message.js" defer></script>
   </body>
 </html>

@@ -2,26 +2,181 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-
-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link CSS Files -->
+    <link rel="stylesheet" href="css/css_reset.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/css_reset.css" />
     <link rel="stylesheet" href="css/layout.css" />
-    <title>Page Title</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Guide page</title>
   </head>
   <body>
-    <header>
-      <h1>Pete's assessment project page</h1>
+    <header id="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img src="img/Game Tech Logo.png" alt="Navbar Logo" />
+        </a>
+
+        <nav class="nav-links" id="nav-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="products.html">Products Category</a></li>
+            <li><a href="guide.html">Guide and TIps</a></li>
+            <li><a href="community.html">Community</a></li>
+          </ul>
+          <button class="sign-up">Sign Up</button>
+        </nav>
+
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      </div>
     </header>
+
     <main>
-      <p><a href="../index.html">Home</a></p>
+      <section class="guide-page">
+        <div class="guides-header">
+          <h2>Guides</h2>
+          <p>Guides, Tips, Step-by-Step related to technology and gadget</p>
+        </div>
+
+        <div class="my-guides">
+          <div class="my-guides-header">
+            <h3>My Guides</h3>
+            <p>Guides that you currently saved</p>
+            <a href="#" class="see-all-link">See all</a>
+          </div>
+
+          <div class="add-game">
+            <div class="add-game-icon">
+              <span>+</span>
+            </div>
+            <p>Add a guide</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="news-page">
+        <h2>Guide and Tips Collection</h2>
+        <div class="news-collection">
+          <div class="news-list">
+            <article class="news-latest">
+              <img src="img/About test.jpg" alt="Image News 1" />
+              <div class="news-info">
+                <span class="news-category">Computer</span>
+                <h4>Best Strategies for ‘Future Proofing’ Your computer</h4>
+                <p>
+                  By following these strategies, you'll create a robust,
+                  adaptable setup that should last through several cycles of
+                  software advancements and gaming or productivity requirements.
+                </p>
+                <div class="news-meta">
+                  <span>By Josh Coulson</span> | <span>1 hour ago</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="news-latest">
+              <img src="img/logitech-g915.webp" alt="Croc Remaster News" />
+              <div class="news-info">
+                <span class="news-category">Computer</span>
+                <h4>Logitech G915 X Lightspeed review</h4>
+                <p>
+                  The Logitech G915 X Lightspeed is a premium low-profile
+                  mechanical gaming keyboard that builds upon its predecessor,
+                  the G915, with several notable enhancements.
+                </p>
+                <div class="news-meta">
+                  <span>By Josh Coulson</span> | <span>2 hours ago</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="news-latest">
+              <img src="img/laptop-gpu.jpeg" alt="Croc Remaster News" />
+              <div class="news-info">
+                <span class="news-category">Laptop</span>
+                <h4>
+                  Best graphics card for laptops in 2024: the mobile GPUs I'd
+                  want in my next gaming laptop
+                </h4>
+                <p>
+                  When selecting a graphics card for a gaming laptop in 2024,
+                  it's essential to balance performance, efficiency, and budget.
+                  Here are some top mobile GPUs to consider
+                </p>
+                <div class="news-meta">
+                  <span>By Josh Coulson</span> | <span>3 hours ago</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="news-latest">
+              <img src="img/build-pc.webp" alt="Croc Remaster News" />
+              <div class="news-info">
+                <span class="news-category">Computer</span>
+                <h4>How to Build a PC: The Ultimate Beginner's Guide</h4>
+                <p>
+                  Building a PC is a rewarding experience! With patience and
+                  attention to detail, you'll have a fully functioning custom
+                  machine. Here's a step-by-step guide for beginners on building
+                  a PC
+                </p>
+                <div class="news-meta">
+                  <span>By Josh Coulson</span> | <span>4 hours ago</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Tambahkan artikel berita lainnya sesuai kebutuhan -->
+          </div>
+          <div class="see-more-container">
+            <button class="see-more-button">SEE MORE</button>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer>
-      <p>&copy; 2024 Your Name. All rights reserved.</p>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Media Sosial -->
+        <div class="footer-social">
+          <hr class="divider" />
+          <div class="social-icons">
+            <a href="#"><img src="img/facebook.png" alt="Facebook" /></a>
+            <a href="#"><img src="img/instagram.png" alt="Instagram" /></a>
+            <a href="#"><img src="img/youtube.png" alt="YouTube" /></a>
+            <a href="#"><img src="img/twitter.png" alt="Twitter" /></a>
+            <a href="#"><img src="img/linkedin.png" alt="LinkedIn" /></a>
+            <a href="#"><img src="img/tiktok.png" alt="TikTok" /></a>
+          </div>
+          <hr class="divider" />
+        </div>
+
+        <!-- Copyright dan Logo -->
+        <div class="footer-branding">
+          <img src="img/Game Tech Logo.png" alt="Logo" class="footer-logo" />
+          <p>&copy; 2024 Game Tech. All rights reserved.</p>
+        </div>
+
+        <!-- Tautan Penting -->
+        <div class="footer-links">
+          <a href="#">Legal Stuff</a> | <a href="#">Privacy Policy</a> |
+          <a href="#">Security</a> | <a href="#">Website Accessibility</a> |
+          <a href="#">Manage Cookies</a>
+        </div>
+      </div>
     </footer>
+
+    <!-- News JS File -->
+    <script src="js/guide.js" defer></script>
+    <script src="js/page_load_message.js" defer></script>
   </body>
 </html>

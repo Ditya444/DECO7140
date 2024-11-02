@@ -2,28 +2,148 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-
-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link CSS Files -->
+    <link rel="stylesheet" href="css/css_reset.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/css_reset.css" />
     <link rel="stylesheet" href="css/layout.css" />
-    <script type="module" src="js/index.js" defer></script>
-    <script type="module" src="js/page_load_message.js" defer></script>
-    <title>Page Title</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Community page</title>
   </head>
   <body>
-    <header>
-      <h1>Pete's assessment project page</h1>
+    <header id="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img src="img/Game Tech Logo.png" alt="Navbar Logo" />
+        </a>
+
+        <nav class="nav-links" id="nav-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="products.html">Products Category</a></li>
+            <li><a href="guide.html">Guide and Tips</a></li>
+            <li><a href="community.html">Community</a></li>
+          </ul>
+          <button class="sign-up">Sign Up</button>
+        </nav>
+
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      </div>
     </header>
+
     <main>
-      <p><a href="../index.html">Home</a></p>
+      <!-- Hero Section -->
+      <section class="hero-forum">
+        <div class="hero-overlay-forum"></div>
+        <div class="forum-content">
+          <div class="icon-container">
+            <img src="img/forum-icon.webp" alt="Icon" class="forum-icon" />
+          </div>
+          <h1>Get in touch with the community</h1>
+          <a href="#forum-page" class="forum-button">Get Started</a>
+        </div>
+      </section>
+
+      <!-- Form Section -->
+      <!-- Forum Discussions Section -->
+      <section class="forum-page" id="forum-page">
+        <h2>Our Discussions</h2>
+        <div id="forum-list" class="forum-list">
+          <!-- Dynamic product content will be inserted here by JavaScript -->
+        </div>
+      </section>
+
+      <!-- Submission Form Section -->
+      <section class="form-section">
+        <h2>Submit a New Discussion</h2>
+        <form id="forumForm">
+          <label for="product_name">Discussion Name:</label>
+          <input type="text" id="product_name" name="product_name" required />
+
+          <label for="product_owner">Discussion Owner:</label>
+          <input type="text" id="product_owner" name="product_owner" required />
+
+          <label for="forum_description">Discussion Description:</label>
+          <textarea
+            id="product_description"
+            name="product_description"
+            required
+          ></textarea>
+
+          <label for="product_info1">Additional Info 1 (Optional):</label>
+          <input type="text" id="product_info1" name="product_info1" />
+
+          <label for="forum_info2">Additional Info 2 (Optional):</label>
+          <input type="text" id="product_info2" name="product_info2" />
+
+          <label for="forum_info3">Additional Info 3 (Optional):</label>
+          <input type="text" id="product_info3" name="product_info3" />
+
+          <label for="forum_photo">Discussion Photo (Optional):</label>
+          <input
+            type="file"
+            id="product_photo"
+            name="product_photo"
+            accept="image/*"
+          />
+
+          <label for="website_code">Website Code:</label>
+          <input
+            type="text"
+            id="website_code"
+            name="website_code"
+            required
+            maxlength="8"
+          />
+
+          <button type="submit">Submit Discussion</button>
+        </form>
+        <div id="response-message"></div>
+      </section>
     </main>
-    <footer>
-      <p>&copy; 2024 Your Name. All rights reserved.</p>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Media Sosial -->
+        <div class="footer-social">
+          <hr class="divider" />
+          <div class="social-icons">
+            <a href="#"><img src="img/facebook.png" alt="Facebook" /></a>
+            <a href="#"><img src="img/instagram.png" alt="Instagram" /></a>
+            <a href="#"><img src="img/youtube.png" alt="YouTube" /></a>
+            <a href="#"><img src="img/twitter.png" alt="Twitter" /></a>
+            <a href="#"><img src="img/linkedin.png" alt="LinkedIn" /></a>
+            <a href="#"><img src="img/tiktok.png" alt="TikTok" /></a>
+          </div>
+          <hr class="divider" />
+        </div>
+
+        <!-- Copyright dan Logo -->
+        <div class="footer-branding">
+          <img src="img/Game Tech Logo.png" alt="Logo" class="footer-logo" />
+          <p>&copy; 2024 Game Tech. All rights reserved.</p>
+        </div>
+
+        <!-- Tautan Penting -->
+        <div class="footer-links">
+          <a href="#">Legal Stuff</a> | <a href="#">Privacy Policy</a> |
+          <a href="#">Security</a> | <a href="#">Website Accessibility</a> |
+          <a href="#">Manage Cookies</a>
+        </div>
+      </div>
     </footer>
+
+    <!-- Index JS File -->
+    <script src="js/community.js" defer></script>
+    <script src="js/page_load_message.js" defer></script>
   </body>
 </html>
